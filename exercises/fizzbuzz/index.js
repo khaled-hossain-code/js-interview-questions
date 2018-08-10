@@ -7,11 +7,45 @@
 // --- Example
 //   fizzBuzz(5);
 //   1
-//   2
+//   2 
 //   fizz
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) {
+  let text = ''; 
+  
+  for(let i=1; i <= n; i++) {
+    text = i;
+
+    if( i % 3 === 0){
+      text = 'fizz';
+    }
+
+    if ( i % 5 === 0){
+      text = text === 'fizz' ? text + 'buzz' : 'buzz';
+    }
+
+    console.log(text);
+  }
+}
+
+function fizzBuzz1(n) {
+  let text = ''; 
+  
+  for(let i=1; i <= n; i++) {
+    text = i;
+
+    if( i % 3 === 0){
+      text = 'fizz';
+    }
+
+    if ( i % 5 === 0){
+      text = text === 'fizz' ? text + 'buzz' : 'buzz';
+    }
+
+    console.log(text);
+  }
+}
 
 module.exports = fizzBuzz;
