@@ -10,6 +10,18 @@
 
 function chunk(array, size) {
   const chunkedArr = [];
+  let iterator = 0;
+
+  while (iterator < array.length) {
+    chunkedArr.push(array.slice(iterator, iterator + size));
+    iterator += size;
+  }
+
+  return chunkedArr;
+}
+
+function chunk1(array, size) {
+  const chunkedArr = [];
   
   while (array.length > 0) {
     chunkedArr.push(array.splice(0, size));
@@ -17,6 +29,5 @@ function chunk(array, size) {
 
   return chunkedArr;
 }
-
 
 module.exports = chunk;
