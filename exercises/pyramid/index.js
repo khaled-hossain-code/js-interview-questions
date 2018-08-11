@@ -13,7 +13,27 @@
 //       '  #  '
 //       ' ### '
 //       '#####'
+  pyramid(4)
+//      '   #   '
+//      '  ###  '
+//      ' ##### '
+//      '#######'
 
-function pyramid(n) {}
+function pyramid(n) {
+  let width = fibonachi(n);
+  let hash, empty;
+
+
+  for(let row=1; row<=n; row++){
+    hash = '#'.repeat(fibonachi(row));
+    empty = ' '.repeat(n - row)
+
+    console.log(`${empty}${hash}${empty}`);
+  }
+}
+
+function fibonachi(n) {
+  return n + n-1;
+}
 
 module.exports = pyramid;
